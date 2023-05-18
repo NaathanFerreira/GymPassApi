@@ -1,0 +1,8 @@
+npx prisma init
+npx prisma generate
+npx prisma migrate dev (lê o arquivo schema.prisma, compara com a útlima versão bd, e ve quais alterações foram feitas)
+npx prisma studio
+
+docker compose up -d
+docker compose stop
+docker compose down

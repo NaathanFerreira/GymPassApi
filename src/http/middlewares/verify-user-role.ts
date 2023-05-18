@@ -1,0 +1,15 @@
+import { FastifyReply, FastifyRequest } from "fastify";
+
+// função que retorna o middleware
+
+export function verifyUserRole(roleToVerify: "ADMIN" | "MEMBER") {
+  return async (req: FastifyRequest, reply: FastifyReply) => {
+    const { role } = req.user;
+
+    if (role !== roleToVerify) {
+      return reply.status(401).send({
+        message: "Unauthorized",
+      });
+    }
+  };
+}
