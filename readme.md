@@ -3,7 +3,7 @@
 ---
 ## About the project
 
-Gym Pass is an REST API project, using SOLID principles, that simulate the [GymPassApp](https://gympass.com/en-us), where you can authenticate, create Gyms, fetch nearby Gyms, make a check-in in a specific Gym, validate a check-in, get user metrics and other funcionalities.
+Gym Pass is a REST API project, using SOLID principles, that simulate the [GymPassApp](https://gympass.com/en-us), where you can authenticate, create Gyms, fetch nearby Gyms, make a check-in in a specific Gym, validate a check-in, get user metrics and other funcionalities.
 It also has Unit Tests and E2E tests.
 
 ### 🛠 Technologies
@@ -13,10 +13,10 @@ It also has Unit Tests and E2E tests.
 - [Prisma](https://www.prisma.io/)
 - [bcryptjs](https://www.npmjs.com/package/bcrypt)
 - [DayJS](https://day.js.org/)
-- [DotEnv](https://axios-http.com/ptbr/docs/intro)
-- [Zod](https://www.npmjs.com/package/json-server)
-- [Vitest](https://www.npmjs.com/package/json-server)
-- [SuperTest](https://www.npmjs.com/package/json-server)
+- [DotEnv](https://www.npmjs.com/package/dotenv)
+- [Zod](https://www.npmjs.com/package/zod)
+- [Vitest](https://vitest.dev/)
+- [SuperTest](https://www.npmjs.com/package/supertest)
 ---
 
 ### 🎲 Run
@@ -38,31 +38,31 @@ $ npm start
 
 ### 📍 Routes
 ## USERS
-# Register [POST]
+### Register [POST]
 - /users
-# Authenticate [POST]
+### Authenticate [POST]
 - /sessions
-# Refresh Token [PATCH]
+### Refresh Token [PATCH]
 - /token/refresh
-# Get User Profile [GET]
+### Get User Profile [GET]
 - /me
 
 ## GYMS
-# Search a Gym [GET]
+### Search a Gym [GET]
 - /gyms/search
-# Search a Nearby Gym [GET]
+### Search a Nearby Gym [GET]
 - /gyms/nearby
-# Create Gym [POST]
+### Create Gym [POST]
 - /gyms
 
 ## CHECK-INS
-# Get Check-Ins history [GET]
+### Get Check-Ins history [GET]
 - /check-ins/history
-# Get User Check-Ins metrics [GET]
+### Get User Check-Ins metrics [GET]
 - /check-ins/metrics
-# Create Check-In [POST]
+### Create Check-In [POST]
 - /gyms/:gymId/check-ins
-# Validate Check-In [PATCH]
+### Validate Check-In [PATCH]
 - /check-ins/:checkInId/validate
 
 
